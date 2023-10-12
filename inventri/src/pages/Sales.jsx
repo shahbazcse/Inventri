@@ -2,8 +2,18 @@ import React from "react";
 
 function Sales() {
   return (
-    <div>
-      <h1>Sales</h1>
+    <div className="flex flex-col gap-6 mx-12 my-8">
+      <div>
+        <h1 className="text-3xl font-bold">Sales</h1>
+      </div>
+      <div className="flex flex-col gap-6 items-center justify-center">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+          beatae temporibus voluptates similique assumenda, qui non odio impedit
+          consequatur quibusdam.
+        </div>
+        <div>Content</div>
+      </div>
     </div>
   );
 }

@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <div className="flex h-screen">
         <NavBar />
-        <div className="bg-blue-100 w-[85%]">
+        <div className="bg-blue-100 w-[85%] overflow-auto">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/inventory" element={<Inventory />} />
