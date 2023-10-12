@@ -1,4 +1,6 @@
 import React from "react";
+import ItemCard from "../components/ItemCard";
+import ItemsHeader from "../components/ItemsHeader";
 
 function Inventory() {
   return (
@@ -12,7 +14,21 @@ function Inventory() {
           beatae temporibus voluptates similique assumenda, qui non odio impedit
           consequatur quibusdam.
         </div>
-        <div>Content</div>
+        <div className="flex flex-col p-4 w-full gap-8">
+          <ol className="flex flex-col">
+            <ItemsHeader />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+          </ol>
+        </div>
       </div>
     </div>
   );
