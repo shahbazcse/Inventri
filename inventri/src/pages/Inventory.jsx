@@ -1,6 +1,7 @@
 import React from "react";
 import ItemCard from "../components/ItemCard";
 import ItemsHeader from "../components/ItemsHeader";
+import { BiPlus } from "react-icons/bi";
 
 function Inventory() {
   return (
@@ -14,20 +15,22 @@ function Inventory() {
           beatae temporibus voluptates similique assumenda, qui non odio impedit
           consequatur quibusdam.
         </div>
-        <div className="flex flex-col p-4 w-full gap-8">
-          <ol className="flex flex-col">
-            <ItemsHeader />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-          </ol>
+        <div className="flex flex-col px-4 w-full">
+          <div className="flex items-center justify-center gap-1 bg-blue-300 hover:bg-blue-400 ml-[3rem] mb-4 text-center mx-auto pl-3 pr-1 py-3 rounded-xl drop-shadow-md cursor-pointer font-bold">
+            Add Item
+            <BiPlus className="h-6 w-6" />
+          </div>
+          <ItemsHeader />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
         </div>
       </div>
     </div>
