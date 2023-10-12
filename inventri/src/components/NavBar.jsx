@@ -9,7 +9,7 @@ function NavBar() {
   };
 
   return (
-    <div className="flex flex-col gap-4 mt-12 items-center w-[15%] bg-[#FFFFFF]">
+    <div className="flex flex-col gap-4 mt-12 items-center w-[15%] bg-[#FFFFFF] drop-shadow-md">
       <div
         className={`${
           isActive("/") ? "bg-blue-300" : "hover:bg-blue-200"
