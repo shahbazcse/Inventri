@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FaShopware } from "react-icons/fa";
+import logo from "../assets/logo.png";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { BsBoxes } from "react-icons/bs";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
@@ -16,7 +16,7 @@ function NavBar() {
   return (
     <div className="flex flex-col gap-4 items-center w-[15%] bg-[#FFFFFF] drop-shadow-md">
       <div className="flex items-center justify-center gap-2 mt-6 mb-12 text-3xl font-bold">
-        <FaShopware />
+        <img className="h-9 w-9" src={logo} alt="" />
         <div>Inventri</div>
       </div>
       <div
