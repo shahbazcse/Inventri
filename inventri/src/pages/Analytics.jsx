@@ -48,6 +48,11 @@ function Analytics() {
             </div>
           </div>
           <div className="mt-4">
+            {!inventoryReport && !salesReport && (
+              <p className="mt-32 font-bold text-xl">
+                Please Choose To Generate A Report
+              </p>
+            )}
             {inventoryReport && <InventoryReport />}
             {salesReport && <SalesReport />}
           </div>
