@@ -1,6 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import {
+  getTotalSales,
+  getTotalRevenue,
+} from "../../services/DashboardService";
 
 function SalesReport() {
+  const sales = useSelector((state) => state.sales);
+
   return (
     <div className="flex flex-col justify-center items-center gap-8">
       <h1 className="text-2xl font-bold">Sales Report</h1>
@@ -15,42 +22,33 @@ function SalesReport() {
             </tr>
           </thead>
           <tbody className="bg-[#FFFFFF]">
-            {/* Map through the inventory data and display it */}
-            <tr>
-              <td className="px-4 py-2 border-r border-b">#</td>
-              <td className="px-4 py-2 border-r border-b">Name</td>
-              <td className="px-4 py-2 border-r border-b">Quantity</td>
-              <td className="px-4 py-2 border-b">Revenue</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2 border-r border-b">#</td>
-              <td className="px-4 py-2 border-r border-b">Name</td>
-              <td className="px-4 py-2 border-r border-b">Quantity</td>
-              <td className="px-4 py-2 border-b">Revenue</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2 border-r border-b">#</td>
-              <td className="px-4 py-2 border-r border-b">Name</td>
-              <td className="px-4 py-2 border-r border-b">Quantity</td>
-              <td className="px-4 py-2 border-b">Revenue</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2 border-r border-b">#</td>
-              <td className="px-4 py-2 border-r border-b">Name</td>
-              <td className="px-4 py-2 border-r border-b">Quantity</td>
-              <td className="px-4 py-2 border-b">Revenue</td>
-            </tr>
+            {sales.map(({ name, quantity, profit }, index) => (
+              <tr key={index}>
+                <td className="px-4 py-2 border-r border-b">#{index + 1}</td>
+                <td className="px-4 py-2 border-r border-b font-bold">
+                  {name}
+                </td>
+                <td className="px-4 py-2 border-r border-b">
+                  {quantity} units
+                </td>
+                <td className="px-4 py-2 border-b">${profit}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
         <table className="bg-blue-300 rounded-lg">
           <tbody>
             <tr>
               <td className="px-6 py-3  border font-bold">Total Sales</td>
-              <td className="px-6 py-3  border font-bold">100</td>
+              <td className="px-6 py-3  border font-bold">
+                {getTotalSales(sales)} units
+              </td>
             </tr>
             <tr>
               <td className="px-6 py-3  border font-bold">Total Profit</td>
-              <td className="px-6 py-3  border font-bold">100</td>
+              <td className="px-6 py-3  border font-bold">
+                ${getTotalRevenue(sales)}
+              </td>
             </tr>
           </tbody>
         </table>

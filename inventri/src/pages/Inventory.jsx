@@ -2,8 +2,10 @@ import React from "react";
 import ItemCard from "../components/Inventory/ItemCard";
 import ItemsHeader from "../components/Inventory/ItemsHeader";
 import { BiPlus } from "react-icons/bi";
+import { useSelector } from "react-redux";
 
 function Inventory() {
+  const inventory = useSelector((state) => state.inventory);
   return (
     <div className="flex flex-col gap-6 mx-12 my-8">
       <div>
@@ -21,16 +23,9 @@ function Inventory() {
             <BiPlus className="h-6 w-6" />
           </div>
           <ItemsHeader />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
+          {inventory.map((item, index) => (
+            <ItemCard key={index} serial={index + 1} item={item} />
+          ))}
         </div>
       </div>
     </div>
