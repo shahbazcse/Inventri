@@ -1,6 +1,6 @@
 import React from "react";
-import ItemCard from "../components/ItemCard";
-import ItemsHeader from "../components/ItemsHeader";
+import ItemCard from "../components/Inventory/ItemCard";
+import ItemsHeader from "../components/Inventory/ItemsHeader";
 import { BiPlus } from "react-icons/bi";
 
 function Inventory() {

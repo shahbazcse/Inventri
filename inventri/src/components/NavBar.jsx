@@ -13,7 +13,7 @@ function NavBar() {
       <div
         className={`${
           isActive("/") ? "bg-blue-300" : "hover:bg-blue-200"
-        } w-[16vh] text-center px-4 py-3 rounded-xl cursor-pointer font-bold`}
+        } w-[16vh] text-center px-4 py-3 rounded-xl cursor-pointer font-bold drop-shadow-md`}
         onClick={() => navigate("/")}
       >
         Dashboard
@@ -21,7 +21,7 @@ function NavBar() {
       <div
         className={`${
           isActive("/inventory") ? "bg-blue-300" : "hover:bg-blue-200"
-        } w-[16vh] text-center px-4 py-3 rounded-xl cursor-pointer font-bold`}
+        } w-[16vh] text-center px-4 py-3 rounded-xl cursor-pointer font-bold drop-shadow-md`}
         onClick={() => navigate("/inventory")}
       >
         Inventory
@@ -29,7 +29,7 @@ function NavBar() {
       <div
         className={`${
           isActive("/sales") ? "bg-blue-300" : "hover:bg-blue-200"
-        } w-[16vh] text-center px-4 py-3 rounded-xl cursor-pointer font-bold`}
+        } w-[16vh] text-center px-4 py-3 rounded-xl cursor-pointer font-bold drop-shadow-md`}
         onClick={() => navigate("/sales")}
       >
         Sales
@@ -37,7 +37,7 @@ function NavBar() {
       <div
         className={`${
           isActive("/analytics") ? "bg-blue-300" : "hover:bg-blue-200"
-        } w-[16vh] text-center px-4 py-3 rounded-xl cursor-pointer font-bold`}
+        } w-[16vh] text-center px-4 py-3 rounded-xl cursor-pointer font-bold drop-shadow-md`}
         onClick={() => navigate("/analytics")}
       >
         Analytics

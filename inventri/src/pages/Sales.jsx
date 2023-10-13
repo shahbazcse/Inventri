@@ -1,13 +1,13 @@
 import React from "react";
 import { BiPlus } from "react-icons/bi";
-import SaleCard from '../components/SaleCard';
-import SalesHeader from '../components/SalesHeader';
+import SaleCard from "../components/Sales/SaleCard";
+import SalesHeader from "../components/Sales/SalesHeader";
 
 function Sales() {
   return (
     <div className="flex flex-col gap-6 mx-12 my-8">
       <div>
-        <h1 className="text-3xl font-bold">Inventory</h1>
+        <h1 className="text-3xl font-bold">Sales</h1>
       </div>
       <div className="flex flex-col gap-6 items-center justify-center">
         <div>
@@ -20,17 +20,17 @@ function Sales() {
             Add Sale
             <BiPlus className="h-6 w-6" />
           </div>
-          <SalesHeader/>
-          <SaleCard/>
-          <SaleCard/>
-          <SaleCard/>
-          <SaleCard/>
-          <SaleCard/>
-          <SaleCard/>
-          <SaleCard/>
-          <SaleCard/>
-          <SaleCard/>
-          <SaleCard/>
+          <SalesHeader />
+          <SaleCard />
+          <SaleCard />
+          <SaleCard />
+          <SaleCard />
+          <SaleCard />
+          <SaleCard />
+          <SaleCard />
+          <SaleCard />
+          <SaleCard />
+          <SaleCard />
         </div>
       </div>
     </div>
