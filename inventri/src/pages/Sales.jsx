@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiPlus } from "react-icons/bi";
 import SaleCard from "../components/Sales/SaleCard";
 import SalesHeader from "../components/Sales/SalesHeader";
+import Modal from "../components/Modals/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { addSale } from "../services/SalesService";
 
 function Sales() {
   const dispatch = useDispatch();
+  const [openModal, setOpenModal] = useState(false);
   const sales = useSelector((state) => state.sales);
 
-  const handleAddSale = () => {
-    const sale = {
+  const handleAddSale = (sale) => {
+    const sale1 = {
       item: "6526e072a1a8400c230c6681",
       name: "Test",
       quantity: 0,
       price: 0,
       profit: 0,
     };
+    console.log(sale);
     dispatch(addSale(sale));
   };
 
@@ -33,7 +36,7 @@ function Sales() {
         </div>
         <div className="flex flex-col px-4 w-full">
           <div
-            onClick={handleAddSale}
+            onClick={() => setOpenModal(true)}
             className="flex items-center justify-center gap-1 bg-[#64CCC5] hover:bg-[#3eb8af] ml-[3rem] mb-4 text-center mx-auto pl-3 pr-1 py-3 rounded-xl drop-shadow-md cursor-pointer font-bold"
           >
             Add Sale
@@ -45,6 +48,13 @@ function Sales() {
           ))}
         </div>
       </div>
+      {openModal && (
+        <Modal
+          setOpenModal={setOpenModal}
+          action={handleAddSale}
+          formType={"Sale"}
+        />
+      )}
     </div>
   );
 }

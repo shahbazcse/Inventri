@@ -12,9 +12,11 @@ const fetchInventory = () => async (dispatch) => {
   }
 };
 
-const addItem = () => async (dispatch) => {
+const addItem = (item) => async (dispatch) => {
   try {
-    const response = await axios.post(`${api}/items`);
+    const response = await axios.post(`${api}/items`, {
+      itemData: item,
+    });
     if (response.status === 201) {
       dispatch({ type: "ADD_ITEM", payload: response.data.item });
     }
