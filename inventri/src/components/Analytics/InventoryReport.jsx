@@ -18,7 +18,9 @@ const InventoryReport = () => {
               <th className="px-4 py-2 border-r border-b">#</th>
               <th className="px-4 py-2 border-r border-b">Name</th>
               <th className="px-4 py-2 border-r border-b">Quantity</th>
-              <th className="px-4 py-2 border-r border-b">Cost Price</th>
+              <th className="px-4 py-2 border-r border-b">
+                Cost Price <span className="text-slate-700">(Per Unit)</span>
+              </th>
               <th className="px-4 py-2 border-b">Category</th>
             </tr>
           </thead>
