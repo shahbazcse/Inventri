@@ -14,7 +14,10 @@ export default function Modal({ setOpenModal, action, formType, item }) {
       className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex flex-col items-center justify-center"
     >
       <div className="bg-white rounded-lg mx-[6vh] w-[42vh] lg:mx-[36vh]">
-        <div className="flex justify-end sticky top-0 z-10 drop-shadow-md opacity-[0.85] bg-white border-b border-gray-100 text-white text-right px-4 py-2 rounded-t-lg">
+        <div className="flex justify-end items-center sticky top-0 z-10 drop-shadow-md opacity-[0.85] bg-white border-b border-gray-100 text-white text-right px-4 py-2 rounded-t-lg">
+          <div className="text-black mx-auto text-xl font-bold">
+            {formType !== "Edit Item" && "Add"} {formType}
+          </div>
           <div
             onClick={() => setOpenModal(false)}
             className="border-2 p-1 border-gray-300 rounded-full hover:bg-gray-400 cursor-pointer"
@@ -38,7 +41,7 @@ export default function Modal({ setOpenModal, action, formType, item }) {
               setOpenModal={setOpenModal}
               btnStyle={"bg-blue-200 hover:bg-blue-300"}
             />
-          ) : formType === "EditForm" ? (
+          ) : formType === "Edit Item" ? (
             <EditItemForm
               item={item}
               action={action}

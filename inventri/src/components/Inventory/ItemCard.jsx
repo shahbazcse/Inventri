@@ -81,7 +81,7 @@ function ItemCard({ serial, item }) {
         <Modal
           setOpenModal={setOpenModal}
           action={handleItemEdit}
-          formType={"EditForm"}
+          formType={"Edit Item"}
           item={item}
         />
       )}
