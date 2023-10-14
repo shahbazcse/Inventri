@@ -29,7 +29,7 @@ function Dashboard() {
         <h1 className="text-3xl font-bold">Dashboard</h1>
       </div>
       <div className="flex flex-col gap-6 items-center justify-center">
-        <div className="mx-[12vh]">
+        <div className="mx-[12vh] text-lg">
           Welcome to your dashboard, where you can get a quick snapshot of your
           business's vital statistics. Currently, your total stock on hand is
           displayed, giving you an immediate view of available inventory. Total

@@ -29,7 +29,7 @@ function Inventory() {
         <h1 className="text-3xl font-bold">Inventory</h1>
       </div>
       <div className="flex flex-col gap-10 items-center justify-center">
-        <div className="mx-[12vh]">
+        <div className="mx-[12vh] text-lg">
           Effortlessly control your inventory with our intuitive system. Our
           user-friendly inventory module allows you to maintain a detailed list
           of all your items. It provides essential features, such as adding new

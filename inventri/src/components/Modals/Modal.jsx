@@ -13,7 +13,7 @@ export default function Modal({ setOpenModal, action, formType, item }) {
       onClick={(e) => closeModal(e)}
       className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex flex-col items-center justify-center"
     >
-      <div className="bg-white rounded-lg mx-[6vh] w-[42vh] lg:mx-[36vh]">
+      <div className="bg-white rounded-lg mx-[6vh] w-[42vh] lg:mx-[36vh] font-[poppins]">
         <div className="flex justify-end items-center sticky top-0 z-10 drop-shadow-md opacity-[0.85] bg-white border-b border-gray-100 text-white text-right px-4 py-2 rounded-t-lg">
           <div className="text-black mx-auto text-xl font-bold">
             {formType !== "Edit Item" && "Add"} {formType}

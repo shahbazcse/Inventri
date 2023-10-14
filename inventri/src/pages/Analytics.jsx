@@ -22,7 +22,7 @@ function Analytics() {
         <h1 className="text-3xl font-bold">Analytics</h1>
       </div>
       <div className="flex flex-col gap-10 items-center justify-center">
-        <div className="mx-[12vh]">
+        <div className="mx-[12vh] text-lg">
           Whether you're tracking inventory levels or monitoring your sales
           performance, our Analytics & Reports provides the data you need to drive
           informed decisions and achieve your business goals. Stay on top of

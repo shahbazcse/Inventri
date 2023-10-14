@@ -30,7 +30,7 @@ function SaleForm({ action, setOpenModal, btnStyle }) {
 
   return (
     <>
-      <div className="flex flex-col justify-end items-center gap-4 font-[poppins]">
+      <div className="flex flex-col justify-end items-center gap-4">
         <div className="flex items-center text-lg">
           <div className="w-[16vh]">Item</div>
           <select

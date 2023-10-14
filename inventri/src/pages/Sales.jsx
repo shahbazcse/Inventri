@@ -43,7 +43,7 @@ function Sales() {
         <h1 className="text-3xl font-bold">Sales</h1>
       </div>
       <div className="flex flex-col gap-10 items-center justify-center">
-        <div className="mx-[12vh]">
+        <div className="mx-[12vh] text-lg">
           Experience seamless sales management with our advanced system. Our
           sales module not only keeps track of all your sales but also allows
           you to add new sales with ease. It enables you to filter sales based

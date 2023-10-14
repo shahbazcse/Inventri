@@ -17,15 +17,15 @@ function NavBar() {
   };
 
   return (
-    <div className="flex flex-col gap-4 items-center w-[15%] bg-[#FFFFFF] drop-shadow-md">
+    <div className="flex flex-col gap-4 items-center w-[15%] bg-[#FFFFFF] drop-shadow-md font-[raleway] text-xl">
       <div className="flex items-center justify-center gap-2 mt-6 mb-12 text-3xl font-bold">
         <img className="h-9 w-9" src={logo} alt="" />
-        <div>Inventri</div>
+        <div className="tracking-wider">Inventri</div>
       </div>
       <div
         className={`${
           isActive("/") ? "bg-blue-300" : "hover:bg-blue-200"
-        } w-[16vh] flex items-center gap-4 text-center px-4 py-3 rounded-xl cursor-pointer drop-shadow-md`}
+        } w-[18vh] flex items-center gap-4 text-center px-4 py-3 rounded-xl cursor-pointer drop-shadow-md`}
         onClick={() => navigate("/")}
       >
         <LuLayoutDashboard className="h-7 w-7" />
@@ -34,7 +34,7 @@ function NavBar() {
       <div
         className={`${
           isActive("/inventory") ? "bg-blue-300" : "hover:bg-blue-200"
-        } w-[16vh] flex items-center gap-4 text-center px-4 py-3 rounded-xl cursor-pointer drop-shadow-md`}
+        } w-[18vh] flex items-center gap-4 text-center px-4 py-3 rounded-xl cursor-pointer drop-shadow-md`}
         onClick={() => navigate("/inventory")}
       >
         <BsBoxes className="h-7 w-7" />
@@ -43,7 +43,7 @@ function NavBar() {
       <div
         className={`${
           isActive("/sales") ? "bg-blue-300" : "hover:bg-blue-200"
-        } w-[16vh] flex items-center gap-4 text-center px-4 py-3 rounded-xl cursor-pointer drop-shadow-md`}
+        } w-[18vh] flex items-center gap-4 text-center px-4 py-3 rounded-xl cursor-pointer drop-shadow-md`}
         onClick={() => navigate("/sales")}
       >
         <PiShoppingCartSimpleLight className="h-7 w-7" />
@@ -52,7 +52,7 @@ function NavBar() {
       <div
         className={`${
           isActive("/analytics") ? "bg-blue-300" : "hover:bg-blue-200"
-        } w-[16vh] flex items-center gap-4 text-center px-4 py-3 rounded-xl cursor-pointer drop-shadow-md`}
+        } w-[18vh] flex items-center gap-4 text-center px-4 py-3 rounded-xl cursor-pointer drop-shadow-md`}
         onClick={() => navigate("/analytics")}
       >
         <VscGraph className="h-7 w-7" />

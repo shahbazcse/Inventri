@@ -9,9 +9,9 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <div className="App">
-      <div className="flex h-screen">
+      <div className="flex h-screen font-[roboto]">
         <NavBar />
-        <div className="bg-blue-100 w-[85%] overflow-auto">
+        <div className="bg-blue-100 tracking-wide w-[85%] overflow-auto">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/inventory" element={<Inventory />} />
