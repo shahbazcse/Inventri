@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import Modal from "../Modals/Modal";
 import { FiEdit } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
-import { deleteItem } from "../../services/InventoryService";
+import { deleteItem, updateItem } from "../../services/InventoryService";
 import { useDispatch } from "react-redux";
 
 function ItemCard({ serial, item }) {
   const dispatch = useDispatch();
+  const [openModal, setOpenModal] = useState(false);
 
   const [tools, setTools] = useState(false);
 
@@ -20,11 +22,12 @@ function ItemCard({ serial, item }) {
   };
 
   const handleItemDelete = () => {
-    console.log("Reached handle function...");
     dispatch(deleteItem(_id));
   };
 
-  const handleItemEdit = () => {};
+  const handleItemEdit = (item) => {
+    dispatch(updateItem(item));
+  };
 
   return (
     <div className="flex items-center">
@@ -61,7 +64,7 @@ function ItemCard({ serial, item }) {
           } flex flex-col gap-3 ml-3`}
         >
           <div
-            onClick={handleItemEdit}
+            onClick={() => setOpenModal(true)}
             className=" p-1 hover:bg-slate-300 hover:text-blue-700 rounded-md cursor-pointer"
           >
             <FiEdit className="h-6 w-6" />
@@ -74,6 +77,14 @@ function ItemCard({ serial, item }) {
           </div>
         </div>
       </div>
+      {openModal && (
+        <Modal
+          setOpenModal={setOpenModal}
+          action={handleItemEdit}
+          formType={"EditForm"}
+          item={item}
+        />
+      )}
     </div>
   );
 }

@@ -25,13 +25,15 @@ const addItem = (item) => async (dispatch) => {
   }
 };
 
-const updateItem = (itemId) => async (dispatch) => {
+const updateItem = (item) => async (dispatch) => {
   try {
-    const response = await axios.post(`${api}/items/${itemId}`);
+    const response = await axios.post(`${api}/items/update-item`, {
+      updatedData: item,
+    });
     if (response.status === 200) {
       dispatch({
         type: "UPDATE_ITEM",
-        payload: { id: itemId, item: response.data.item },
+        payload: { id: item._id, item: response.data.item },
       });
     }
   } catch (error) {

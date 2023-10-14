@@ -1,7 +1,8 @@
 import SaleForm from "../Modals/forms/SaleForm";
 import ItemForm from "../Modals/forms/ItemForm";
+import EditItemForm from "../Modals/forms/EditItemForm";
 
-export default function Modal({ setOpenModal, action, formType }) {
+export default function Modal({ setOpenModal, action, formType, item }) {
   const closeModal = (e) => {
     e.target.id === "blur-area" && setOpenModal(false);
   };
@@ -33,6 +34,13 @@ export default function Modal({ setOpenModal, action, formType }) {
         <div className="flex flex-col mx-8 mt-8 mb-4 gap-8">
           {formType === "Item" ? (
             <ItemForm
+              action={action}
+              setOpenModal={setOpenModal}
+              btnStyle={"bg-blue-200 hover:bg-blue-300"}
+            />
+          ) : formType === "EditForm" ? (
+            <EditItemForm
+              item={item}
               action={action}
               setOpenModal={setOpenModal}
               btnStyle={"bg-blue-200 hover:bg-blue-300"}
