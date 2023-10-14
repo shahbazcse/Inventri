@@ -28,11 +28,15 @@ function Inventory() {
       <div>
         <h1 className="text-3xl font-bold">Inventory</h1>
       </div>
-      <div className="flex flex-col gap-6 items-center justify-center">
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-          beatae temporibus voluptates similique assumenda, qui non odio impedit
-          consequatur quibusdam.
+      <div className="flex flex-col gap-10 items-center justify-center">
+        <div className="mx-[12vh]">
+          Effortlessly control your inventory with our intuitive system. Our
+          user-friendly inventory module allows you to maintain a detailed list
+          of all your items. It provides essential features, such as adding new
+          items, updating existing ones, and even deleting items that are no
+          longer needed. Each item in your inventory is meticulously cataloged,
+          featuring crucial details like item name, category, quantity, and
+          more.
         </div>
         <div className="flex flex-col px-4 w-full">
           <div

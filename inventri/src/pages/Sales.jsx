@@ -27,11 +27,15 @@ function Sales() {
       <div>
         <h1 className="text-3xl font-bold">Sales</h1>
       </div>
-      <div className="flex flex-col gap-6 items-center justify-center">
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-          beatae temporibus voluptates similique assumenda, qui non odio impedit
-          consequatur quibusdam.
+      <div className="flex flex-col gap-10 items-center justify-center">
+        <div className="mx-[12vh]">
+          Experience seamless sales management with our advanced system. Our
+          sales module not only keeps track of all your sales but also
+          allows you to add new sales with ease. It enables you to filter sales
+          based on a specified date range, providing you with a clear view of
+          your sales history. Whether you're analyzing recent performance or
+          checking sales trends, our system equips you with the tools to make
+          data-driven decisions.
         </div>
         <div className="flex flex-col px-4 w-full">
           <div
