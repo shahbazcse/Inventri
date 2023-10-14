@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ItemCard from "../components/Inventory/ItemCard";
 import ItemsHeader from "../components/Inventory/ItemsHeader";
 import { BiPlus } from "react-icons/bi";
 import Modal from "../components/Modals/Modal";
 import { addItem } from "../services/InventoryService";
+import { fetchInventory } from "../services/InventoryService";
+import { fetchSales } from "../services/SalesService";
 
 function Inventory() {
   const dispatch = useDispatch();
@@ -15,6 +17,11 @@ function Inventory() {
   const handleAddItem = (item) => {
     dispatch(addItem(item));
   };
+
+  useEffect(() => {
+    dispatch(fetchInventory());
+    dispatch(fetchSales());
+  }, [dispatch]);
 
   return (
     <div className="flex flex-col gap-6 mx-12 my-8">

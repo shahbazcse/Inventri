@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiPlus } from "react-icons/bi";
 import SaleCard from "../components/Sales/SaleCard";
 import SalesHeader from "../components/Sales/SalesHeader";
 import Modal from "../components/Modals/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { addSale } from "../services/SalesService";
+import { fetchInventory } from "../services/InventoryService";
+import { fetchSales } from "../services/SalesService";
 
 function Sales() {
   const dispatch = useDispatch();
@@ -12,16 +14,13 @@ function Sales() {
   const sales = useSelector((state) => state.sales);
 
   const handleAddSale = (sale) => {
-    const sale1 = {
-      item: "6526e072a1a8400c230c6681",
-      name: "Test",
-      quantity: 0,
-      price: 0,
-      profit: 0,
-    };
-    console.log(sale);
     dispatch(addSale(sale));
   };
+
+  useEffect(() => {
+    dispatch(fetchInventory());
+    dispatch(fetchSales());
+  }, []);
 
   return (
     <div className="flex flex-col gap-6 mx-12 my-8">

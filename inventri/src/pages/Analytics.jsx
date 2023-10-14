@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InventoryReport from "../components/Analytics/InventoryReport";
 import SalesReport from "../components/Analytics/SalesReport";
 import { AiOutlineReload } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { fetchInventory } from "../services/InventoryService";
+import { fetchSales } from "../services/SalesService";
 
 function Analytics() {
+  const dispatch = useDispatch();
   const [inventoryReport, setInventoryReport] = useState(false);
   const [salesReport, setSalesReport] = useState(false);
-
+  
+  useEffect(() => {
+    dispatch(fetchInventory());
+    dispatch(fetchSales());
+  }, []);
+  
   return (
     <div className="flex flex-col gap-6 mx-12 my-8">
       <div>

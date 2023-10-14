@@ -18,7 +18,7 @@ function Dashboard() {
   const inventory = useSelector((state) => state.inventory);
   const sales = useSelector((state) => state.sales);
   const lastSale = useSelector((state) => state.lastSale);
-
+  
   useEffect(() => {
     dispatch(fetchInventory());
     dispatch(fetchSales());
