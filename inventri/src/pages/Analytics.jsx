@@ -14,7 +14,7 @@ function Analytics() {
   useEffect(() => {
     dispatch(fetchInventory());
     dispatch(fetchSales());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="flex flex-col gap-6 mx-12 my-8">
