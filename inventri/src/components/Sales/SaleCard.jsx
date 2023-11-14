@@ -35,7 +35,7 @@ function SaleCard({ sale, serial }) {
             <p>{quantity} units</p>
           </div>
           <div className="flex justify-center items-center border-r w-[20vh] h-full">
-            <p>${item.costPrice * quantity}</p>
+            <p>${item?.costPrice * quantity}</p>
           </div>
           <div className="flex justify-center items-center border-r w-[20vh] h-full">
             <p>${price}</p>
