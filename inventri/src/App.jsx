@@ -5,10 +5,15 @@ import Sales from "./pages/Sales";
 import Analytics from "./pages/Analytics";
 import Dashboard from "./pages/Dashboard";
 import NavBar from "./components/NavBar";
+import NonDesktopPage from "./pages/NonDesktopPage";
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <div className="block xl:hidden h-screen">
+        <NonDesktopPage />
+      </div>
+    <div className="hidden xl:block App">
       <div className="flex h-screen font-[roboto]">
         <NavBar />
         <div className="bg-blue-100 tracking-wide w-[85%] overflow-auto">
@@ -21,6 +26,7 @@ function App() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
