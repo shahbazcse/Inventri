@@ -1,5 +1,5 @@
 import axios from "axios";
-const api = "https://inventribackend.shahbazahmad12.repl.co";
+const api = "https://inventri-backend.vercel.app";
 
 const fetchInventory = () => async (dispatch) => {
   try {
